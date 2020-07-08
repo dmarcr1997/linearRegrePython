@@ -42,9 +42,9 @@ mplot.show() #print out graph
 
 choice = "y" 
 while(choice == "y" or choice == "Y"): #while user wants to enter data loop
-  regre_val = float(input("What value Would You like to find: ")) #get value from user and convert to a float
-  y_pred = regressor.predict([[regre_val]]) #send value to AI to get result
-  print("Here is your value {}".format(y_pred)) #print out result
+  regre_val = float(input("What {} Would You like to find: ".format(x_name))) #get value from user and convert to a float
+  y_pred = regressor.predict([[regre_val]])[0] #send value to AI to get result
+  print("Here is your {} {:.2f}".format(y_name, y_pred)) #print out result
   choice = input("Would You like to predict more values(y/n): ") #user input to try again
 
 print("Thank You")
